@@ -1,4 +1,1 @@
-THIS IS OUR PROJECT
-
-Ellie Abrams
-Mengdi Lin
+My first experiment with html with a form and python flask as server :)
