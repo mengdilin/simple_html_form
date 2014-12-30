@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <u1>
+      <h1>{{story}}</h1>
+    </u1>
+  </head>
+<body>
+  {% for comment in comments%}
+  comment<br><br>
+  {% endfor %}
+  <form action="update" method="POST">
+    Comments<br>
+    <textarea name="comments" cols="50" rows="3">Comments here!</textarea><br>
+    <input type="submit" value="comment">

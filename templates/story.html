@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {background-color:PowderBlue}
+      p {color:firebrick}
+    </style>
+    <u1>
+      <h1>
+	<p style="font-size:30px;font-family:times;text-align:left;">
+	{{title}}
+      </h1>
+    </u1>
+  </head>
+<body>
+  {% for comment in comments%}
+  {{comment}}<br><br>
+  {% endfor %}
+  <form action="story" method="POST">
+    Comments<br>
+    <textarea name="comments" cols="50" rows="5"></textarea><br>
+    <input type="submit" name="button" value="comment">
+    <input type="submit" name="button" value="go back">
+    <input type="hidden" name="title" value="{{title}}">
+</body>

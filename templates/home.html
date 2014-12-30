@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {background-color:PowderBlue}
+      p {color:cadetblue}
+    </style>
+    <h1>
+      <p style="font-size:30px;font-family:times;text-align:left;">
+	Story Blog</p>
+    </h1>
+  </head>
+  <body>
+    <form action="" method="POST">
+      New Story: <input type="text" name="title"><br>
+      <input type="submit" name="button" value="Submit"><br><br>
+    </form>
+
+    <form action="" method="POST">
+      {% if titles %}
+      Select Your Story: <select name="select">
+	{% for title in titles | sort %}
+	<option valuex="{{title}}">{{title}}</option>
+	{% endfor %}
+      </select><br>
+      <input type="submit" name="button" value="Go To Story">
+      <input type="submit" name="button" value="Delete Story">
+      {% endif %}
+    </form>
+  </body>
+</html>
